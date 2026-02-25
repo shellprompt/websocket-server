@@ -1,6 +1,9 @@
 [package]
-name = "websocket"
-version = "1.0"
-edition = "2026"
+name = "websocket-server"
+version = "0.1.0"
+edition = "2024"
 
 [dependencies]
+tokio = { version = "1.49.0", features = ["net", "rt", "macros", "sync"] }
+tokio-tungstenite = "0.28"
+futures-util = "0.3.32"

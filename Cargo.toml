@@ -3,7 +3,14 @@ name = "websocket-server"
 version = "0.1.0"
 edition = "2024"
 
+repository = "https://github.com/shellprompt/websocket-server"
+
 [dependencies]
 tokio = { version = "1.49.0", features = ["net", "rt", "macros", "sync"] }
 tokio-tungstenite = "0.28"
 futures-util = "0.3.32"
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
